@@ -1,9 +1,21 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class MusicShop {
 
     public static void main(String[] args) {
-        ArrayList<Song> musicList = new ArrayList();
+        List<Song> musicList = new ArrayList();
+        createMusicList(musicList);
+        System.out.println("----------------------------------");
+        System.out.println("Classic songs less then 10 minute.");
+        System.out.println("----------------------------------");
+        findByType(musicList);
+        System.out.println("---------------------------");
+        System.out.println("Songs sorted by Songwriter");
+        System.out.println("---------------------------");
+        printSortedSongs(sortSongsBySongwriter(musicList));
+    }
+
+    private static void createMusicList(List<Song> musicList) {
         musicList.add(new Song("Highway to Hell", "AC/DC", 3.29, SongType.Rock));
         musicList.add(new Song("Moonlight Sonata", "Ludwig van Beethoven", 15.0, SongType.Classic));
         musicList.add(new Song("Epilogue(La La Land)", "Justin Hurwitz", 7.41, SongType.Soundtrack));
@@ -16,19 +28,9 @@ public class MusicShop {
         musicList.add(new Song("Ghostbusters", "Ray Parker Jr.", 4.05, SongType.Soundtrack));
         musicList.add(new Song("Revolution Radio", "Green Day", 3.00, SongType.Rock));
         musicList.add(new Song("Closing Time", "Semisonic", 4.33, SongType.Rock));
-        System.out.println("----------------------------------");
-        System.out.println("Classic songs less then 10 minute.");
-        System.out.println("----------------------------------");
-        findByType(musicList);
-        System.out.println("---------------------------");
-        System.out.println("Songs sorted by Songwriter");
-        System.out.println("---------------------------");
-        printSortedSongs(sortSongsBySongwriter(musicList));
-
-
     }
 
-    public static void findByType(ArrayList<Song> musicList) {
+    private static void findByType(List<Song> musicList) {
         for (Song song : musicList) {
             if (song.getSongType().equals(SongType.Classic) && song.getSongDuration() < 10) {
                 System.out.println(song);
@@ -36,12 +38,12 @@ public class MusicShop {
         }
     }
 
-    private static ArrayList<Song> sortSongsBySongwriter(ArrayList<Song> musicList) {
+    private static List<Song> sortSongsBySongwriter(List<Song> musicList) {
         musicList.sort(new Song.SongwriterComparator());
         return musicList;
     }
 
-    private static void printSortedSongs(ArrayList<Song> musicList) {
+    private static void printSortedSongs(List<Song> musicList) {
         for (Song song : musicList) {
             System.out.println(song);
         }
