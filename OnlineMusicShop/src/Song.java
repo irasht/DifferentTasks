@@ -33,27 +33,6 @@ public class Song {
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (this == object) {
-            return true;
-        }
-        if ((object == null) || (object.getClass() != getClass())) {
-            return false;
-        }
-        Song song = (Song) object;
-
-        return songwriter == song.songwriter || (songwriter != null && songwriter.equals(song.songwriter));
-    }
-
-    @Override
-    public int hashCode() {
-        int prime = 31;
-        int hash = 1;
-        hash = prime * hash + (songwriter == null ? 0 : songwriter.hashCode());
-        return hash;
-    }
-
-    @Override
     public String toString() {
         return name + " played by " + songwriter + ", songDuration: " + songDuration + ", songType: " + songType;
     }

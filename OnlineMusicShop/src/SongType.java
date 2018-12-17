@@ -1,3 +1,3 @@
 public enum SongType {
-    Rock, Classic,Soundtrack,Jazz;
+    Rock, Classic, Soundtrack, Jazz;
 }
