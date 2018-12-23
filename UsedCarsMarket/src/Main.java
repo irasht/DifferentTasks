@@ -26,16 +26,16 @@ public class Main {
     }
 
     private static List<Car> createCarsDatabase(List<Car> list) {
-        list.add(new Car("Chevrolet Colorado", 2017, CarType.Truck, "gas", 2.5, "Euro-6"));
-        list.add(new Car("Ford Transit Connect", 2010, CarType.Minivan, "diesel", 1.8, "Euro-5"));
-        list.add(new Car("Nissan NV350 Caravan", 2012, CarType.Van, "diesel", 3, "Euro-6"));
-        list.add(new Car("Nissan Elgrand", 2005, CarType.Minivan, "petrol", 3.5, "Euro-5"));
-        list.add(new Car("Mercedes-Benz Sprinter", 2006, CarType.Van, "diesel", 2.3, "Euro-5"));
-        list.add(new Car("Honda Ridgeline", 2006, CarType.Truck, "gas", 3.5, "Euro-5"));
-        list.add(new Car("Audi A6 C6 Quattro", 2004, CarType.Car, "diesel", 3, "Euro-4"));
-        list.add(new Car("BMW X6", 2008, CarType.Car, "petrol", 3.5, "Euro-5"));
-        list.add(new Car("Ferrari 458 Italia", 2009, CarType.SportsCar, "petrol", 4.4, "Euro-5"));
-        list.add(new Car("Aston Martin Vantage", 2005, CarType.SportsCar, "petrol", 4.3, "Euro-4"));
+        list.add(new Car("Chevrolet Colorado", 2017, new CarType("Truck"), "gas", 2.5, "Euro-6"));
+        list.add(new Car("Ford Transit Connect", 2010, new CarType("Minivan"), "diesel", 1.8, "Euro-5"));
+        list.add(new Car("Nissan NV350 Caravan", 2012, new CarType("Van"), "diesel", 3, "Euro-6"));
+        list.add(new Car("Nissan Elgrand", 2005, new CarType("Minivan"), "petrol", 3.5, "Euro-5"));
+        list.add(new Car("Mercedes-Benz Sprinter", 2006, new CarType("Van"), "diesel", 2.3, "Euro-5"));
+        list.add(new Car("Honda Ridgeline", 2006, new CarType("Truck"), "gas", 3.5, "Euro-5"));
+        list.add(new Car("Audi A6 C6 Quattro", 2004, new CarType("Car"), "diesel", 3, "Euro-4"));
+        list.add(new Car("BMW X6", 2008, new CarType("Car"), "petrol", 3.5, "Euro-5"));
+        list.add(new Car("Ferrari 458 Italia", 2009, new CarType("SportsCar"), "petrol", 4.4, "Euro-5"));
+        list.add(new Car("Aston Martin Vantage", 2005, new CarType("SportsCar"), "petrol", 4.3, "Euro-4"));
         return list;
     }
 
