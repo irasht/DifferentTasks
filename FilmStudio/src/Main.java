@@ -17,7 +17,7 @@ public class Main {
         printSortedTools(sortToolsByRentPrice(findNeededTools(tools)));
     }
 
-    public static void createListOfTools(List<ITools> tools) {
+    private static void createListOfTools(List<ITools> tools) {
         tools.add(new Camera(1223, ToolsType.ComedyMovie));
         tools.add(new Camera(666, ToolsType.HistoricalFilm));
         tools.add(new Decoration("grass", ToolsType.ComedyMovie));
