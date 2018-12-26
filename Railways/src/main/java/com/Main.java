@@ -1,6 +1,6 @@
 package com;
 
-import com.train.*;
+import com.train.Train;
 
 import java.util.List;
 import java.util.Scanner;

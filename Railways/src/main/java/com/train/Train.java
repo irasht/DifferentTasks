@@ -8,7 +8,7 @@ public class Train {
     private List<Coach> coaches;
     private List<Station> route;
 
-    Train(int trainId, List<Station> route) {
+    public Train(int trainId, List<Station> route) {
         this.trainId = trainId;
         this.route = route;
         this.coaches = new ArrayList<>();

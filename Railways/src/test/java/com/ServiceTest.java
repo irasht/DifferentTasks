@@ -1,5 +1,7 @@
-package com.train;
+package com;
 
+
+import com.train.Train;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

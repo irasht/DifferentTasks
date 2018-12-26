@@ -1,6 +1,10 @@
-package com.train;
+package com;
+
+import com.train.*;
 
 import java.util.*;
+
+import com.train.*;
 
 public class Service {
     private List<Train> trainList;
